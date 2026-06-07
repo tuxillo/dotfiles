@@ -7,6 +7,7 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.clipboard = "unnamedplus"
 
 if vim.g.neovide then
   vim.o.guifont = "MesloLGS_Nerd_Font_Mono:h11"

@@ -151,6 +151,16 @@ Space -       split below
 Space w d     close window
 ```
 
+## Neovide / macOS
+
+```text
+Cmd-c         copy to system clipboard
+Cmd-v         paste from system clipboard
+Cmd-x         cut to system clipboard
+Cmd-a         select all
+Cmd-s         save file
+```
+
 ## Snacks Picker
 
 ```text
