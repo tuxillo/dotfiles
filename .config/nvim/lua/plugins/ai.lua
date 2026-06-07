@@ -2,6 +2,7 @@ return {
   {
     "coder/claudecode.nvim",
     opts = {
+      terminal_cmd = "/bin/sh -c 'set -a; [ -f \"$HOME/.config/claude/env\" ] && . \"$HOME/.config/claude/env\"; set +a; exec claude \"$@\"' claude-env",
       terminal = {
         provider = "snacks",
         split_side = "right",

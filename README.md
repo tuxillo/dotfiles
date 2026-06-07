@@ -46,6 +46,20 @@ claude
 opencode
 ```
 
+Claude can load extra local environment from this optional file:
+
+```text
+~/.config/claude/env
+```
+
+The file is not required. If present, it must use POSIX shell syntax, for example:
+
+```sh
+ANTHROPIC_API_KEY=...
+```
+
+Do not commit this file.
+
 Back up any existing Neovim config:
 
 ```sh
