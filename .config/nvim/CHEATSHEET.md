@@ -161,6 +161,13 @@ Cmd-a         select all
 Cmd-s         save file
 ```
 
+Set machine-local Neovide font size in `~/.config/nvim/local.lua`:
+
+```lua
+vim.g.neovide_font_name = "MesloLGS_Nerd_Font_Mono"
+vim.g.neovide_font_size = 12
+```
+
 ## Snacks Picker
 
 ```text

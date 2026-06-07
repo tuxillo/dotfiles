@@ -9,7 +9,11 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.clipboard = "unnamedplus"
 
+pcall(dofile, vim.fn.stdpath("config") .. "/local.lua")
+
 if vim.g.neovide then
-  vim.o.guifont = "MesloLGS_Nerd_Font_Mono:h11"
+  local font_name = vim.g.neovide_font_name or "MesloLGS_Nerd_Font_Mono"
+  local font_size = vim.g.neovide_font_size or 11
+  vim.o.guifont = font_name .. ":h" .. tostring(font_size)
   vim.g.neovide_input_macos_option_key_is_meta = "both"
 end

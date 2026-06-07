@@ -99,6 +99,25 @@ Do not copy or commit machine-local Neovim runtime directories:
 
 Those are regenerated per machine.
 
+Machine-local Neovim overrides can go in:
+
+```text
+~/.config/nvim/local.lua
+```
+
+This file is ignored by git. Example:
+
+```lua
+vim.g.neovide_font_name = "MesloLGS_Nerd_Font_Mono"
+vim.g.neovide_font_size = 12
+```
+
+There is a template at:
+
+```text
+.config/nvim/local.lua.example
+```
+
 ### External Tools
 
 Useful external tools:

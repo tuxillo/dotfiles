@@ -1,0 +1,5 @@
+-- Copy this file to ~/.config/nvim/local.lua for machine-local overrides.
+-- Do not commit local.lua.
+
+vim.g.neovide_font_name = "MesloLGS_Nerd_Font_Mono"
+vim.g.neovide_font_size = 11
