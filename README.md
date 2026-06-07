@@ -60,6 +60,8 @@ ANTHROPIC_API_KEY=...
 
 Do not commit this file.
 
+Neovim sources this file for Claude through `/bin/sh` when `/bin/sh` exists. If `/bin/sh` is not available, Claude starts normally without this extra env file.
+
 Back up any existing Neovim config:
 
 ```sh
@@ -110,6 +112,9 @@ This file is ignored by git. Example:
 ```lua
 vim.g.neovide_font_name = "MesloLGS_Nerd_Font_Mono"
 vim.g.neovide_font_size = 12
+
+-- Or override the full Neovide guifont string directly.
+-- vim.g.neovide_guifont = "MesloLGS_Nerd_Font_Mono:h12"
 ```
 
 There is a template at:

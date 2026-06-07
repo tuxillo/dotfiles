@@ -3,3 +3,6 @@
 
 vim.g.neovide_font_name = "MesloLGS_Nerd_Font_Mono"
 vim.g.neovide_font_size = 11
+
+-- Or set the full Neovide guifont string directly.
+-- vim.g.neovide_guifont = "MesloLGS_Nerd_Font_Mono:h11"

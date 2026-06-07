@@ -6,3 +6,15 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+local function set_separator_highlights()
+  vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#6b7280" })
+  vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#6b7280" })
+end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  group = vim.api.nvim_create_augroup("user_separator_highlights", { clear = true }),
+  callback = set_separator_highlights,
+})
+
+set_separator_highlights()

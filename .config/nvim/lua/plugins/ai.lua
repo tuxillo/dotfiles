@@ -1,8 +1,12 @@
+local claude_terminal_cmd = vim.fn.executable("/bin/sh") == 1
+    and "/bin/sh -c 'set -a; [ -f \"$HOME/.config/claude/env\" ] && . \"$HOME/.config/claude/env\"; set +a; exec claude \"$@\"' claude-env"
+  or nil
+
 return {
   {
     "coder/claudecode.nvim",
     opts = {
-      terminal_cmd = "/bin/sh -c 'set -a; [ -f \"$HOME/.config/claude/env\" ] && . \"$HOME/.config/claude/env\"; set +a; exec claude \"$@\"' claude-env",
+      terminal_cmd = claude_terminal_cmd,
       terminal = {
         provider = "snacks",
         split_side = "right",

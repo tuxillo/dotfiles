@@ -166,7 +166,12 @@ Set machine-local Neovide font size in `~/.config/nvim/local.lua`:
 ```lua
 vim.g.neovide_font_name = "MesloLGS_Nerd_Font_Mono"
 vim.g.neovide_font_size = 12
+
+-- Or override the full Neovide guifont string directly.
+-- vim.g.neovide_guifont = "MesloLGS_Nerd_Font_Mono:h12"
 ```
+
+Window separators and floating borders are brightened globally with `WinSeparator` and `FloatBorder`.
 
 ## Snacks Picker
 
