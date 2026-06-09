@@ -2,6 +2,17 @@ local claude_terminal_cmd = vim.fn.executable("/bin/sh") == 1
     and "/bin/sh -c 'set -a; [ -f \"$HOME/.config/claude/env\" ] && . \"$HOME/.config/claude/env\"; set +a; exec claude \"$@\"' claude-env"
   or nil
 
+local function agent_win()
+  local position = vim.g.agent_pane_position or "bottom"
+  local size = vim.g.agent_pane_size or 0.37
+
+  if position == "left" or position == "right" then
+    return { position = position, width = size }
+  end
+
+  return { position = position, height = size }
+end
+
 return {
   {
     "coder/claudecode.nvim",
@@ -10,11 +21,8 @@ return {
       terminal = {
         provider = "snacks",
         split_side = "right",
-        split_width_percentage = 0.37,
-        snacks_win_opts = {
-          position = "bottom",
-          height = 0.37,
-        },
+        split_width_percentage = vim.g.agent_pane_size or 0.37,
+        snacks_win_opts = agent_win(),
       },
     },
   },
@@ -25,14 +33,14 @@ return {
       {
         "<leader>ao",
         function()
-          Snacks.terminal({ "opencode" }, { cwd = LazyVim.root(), win = { position = "bottom", height = 0.37 } })
+          Snacks.terminal({ "opencode" }, { cwd = LazyVim.root(), win = agent_win() })
         end,
         desc = "OpenCode (Root Dir)",
       },
       {
         "<leader>aO",
         function()
-          Snacks.terminal({ "opencode" }, { win = { position = "bottom", height = 0.37 } })
+          Snacks.terminal({ "opencode" }, { win = agent_win() })
         end,
         desc = "OpenCode (cwd)",
       },

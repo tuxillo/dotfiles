@@ -169,7 +169,12 @@ vim.g.neovide_font_size = 12
 
 -- Or override the full Neovide guifont string directly.
 -- vim.g.neovide_guifont = "MesloLGS_Nerd_Font_Mono:h12"
+
+vim.g.agent_pane_position = "bottom"
+vim.g.agent_pane_size = 0.37
 ```
+
+`agent_pane_position` supports `bottom`, `right`, `left`, and `top`.
 
 Window separators and floating borders are brightened globally with `WinSeparator` and `FloatBorder`.
 
