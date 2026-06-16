@@ -56,6 +56,8 @@ Space q d     stop saving current session
 
 Sessions are saved automatically. Restore them after reopening Neovim with `Space q s`.
 
+Sessions restore windows/tabs/layout, but not every hidden buffer you opened.
+
 ## Agents
 
 ```text

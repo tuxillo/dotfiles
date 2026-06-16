@@ -8,6 +8,7 @@ vim.opt.sidescrolloff = 8
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.sessionoptions = { "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 
 local local_config = vim.fn.stdpath("config") .. "/local.lua"
 if (vim.uv or vim.loop).fs_stat(local_config) then

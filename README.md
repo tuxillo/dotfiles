@@ -91,6 +91,8 @@ Check tools inside Neovim:
 :checkhealth vim.lsp
 ```
 
+Sessions intentionally restore windows, tabs, and layout without restoring every hidden buffer ever opened in a project.
+
 Do not copy or commit machine-local Neovim runtime directories:
 
 ```text
