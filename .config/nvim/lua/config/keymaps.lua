@@ -16,4 +16,16 @@ if vim.g.neovide then
   end, { desc = "Paste" })
   vim.keymap.set({ "n", "i" }, "<D-s>", "<cmd>w<cr>", { desc = "Save" })
   vim.keymap.set({ "n", "v", "i" }, "<D-a>", "<esc>ggVG", { desc = "Select All" })
+
+  -- Disable Magic Mouse horizontal scrolling (macOS exposes no driver toggle)
+  for _, key in ipairs({
+    "<ScrollWheelLeft>",
+    "<ScrollWheelRight>",
+    "<S-ScrollWheelLeft>",
+    "<S-ScrollWheelRight>",
+    "<C-ScrollWheelLeft>",
+    "<C-ScrollWheelRight>",
+  }) do
+    vim.keymap.set({ "n", "i", "v", "c", "t" }, key, "<Nop>")
+  end
 end
